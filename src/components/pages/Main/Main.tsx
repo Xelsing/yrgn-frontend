@@ -5,9 +5,7 @@ const Main = () => {
   return (
     <main className={styles.Main}>
       <section className={styles.Inner}>
-        <div>
-          <h1>Main page title</h1>
-        </div>
+        <h1>Main page title</h1>
       </section>
     </main>
   );
