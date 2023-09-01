@@ -4,7 +4,7 @@ import styles from './Footer.module.scss';
 const Footer = () => {
   return (
     <footer className={styles.Footer}>
-      Created by &copy;YRGN
+      <p className={styles.Footer__text}>Created by &copy;YRGN</p>
     </footer>
   );
 };

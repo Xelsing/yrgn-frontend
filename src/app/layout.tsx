@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 
 import { Footer, Header } from "@common/index";
 
-import '@styles/globals.scss';
+import '../styles/globals.scss';
 
 const inter = Inter({subsets: ['latin']})
 
