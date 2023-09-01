@@ -1,0 +1,26 @@
+.Testing {
+  background: radial-gradient(91.36% 70.71% at 50% 50%, #041B59 0%, #000A2E 100%);
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Inner {
+  height: 100%;
+  padding: 40px 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  padding: 40px 80px;
+  width: 460px;
+}
+
+
+

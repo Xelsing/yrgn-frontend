@@ -1,0 +1,25 @@
+.BaseButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 22px 40px;
+
+
+  border-radius: 46px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(5px);
+
+  font-family: $Sitka;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+
+
+  &_full_width {
+    width: 100%;
+  }
+}

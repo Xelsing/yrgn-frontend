@@ -8,6 +8,7 @@ const Header = () => {
       <nav className={styles.Header__nav}>
         <Link className={styles.Header__link} href={'/'}>main</Link>
         <Link className={styles.Header__link} href={'/about'}>about</Link>
+        <Link className={styles.Header__link} href={'/test'}>Testing</Link>
       </nav>
     </header>
   );
