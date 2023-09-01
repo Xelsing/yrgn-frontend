@@ -3,6 +3,41 @@
 }
 
 .Inner {
+}
+
+.Title {
   display: flex;
   justify-content: center;
+
+margin: 0 auto;
+}
+
+.Content {
+  margin-top: 40px;
+  padding: 0 100px;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card {
+  width: 240px;
+  height: 320px;
+  border-radius: 20px;
+  border: 8px solid wheat;
+}
+
+.box_1 {
+background-color: #2e3d52;
+}
+.box_2 {
+background-color: #ffa500;
+}
+.box_3 {
+background-color: #263954;
+}
+.box_4 {
+background-color: #f39821;
 }
