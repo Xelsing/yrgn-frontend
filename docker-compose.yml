@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
   next-app:
-    container_name: next-app
+    container_name: yrgn-frontend
     build:
-      context: ./next-app
+      context: .
       dockerfile: Dockerfile
     ports:
       - '3000:80'
