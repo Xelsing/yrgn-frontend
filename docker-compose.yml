@@ -5,7 +5,6 @@ services:
     container_name: yrgn-frontend
     build:
       context: .
-      dockerfile: Dockerfile
     ports:
       - '3000:80'
     restart: unless-stopped
