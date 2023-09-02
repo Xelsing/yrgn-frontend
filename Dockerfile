@@ -5,7 +5,7 @@ FROM base as builder
 COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
-ENV NODE_ENV=development
+#ENV NODE_ENV=development
 RUN npm run build
 
 FROM base as prod
