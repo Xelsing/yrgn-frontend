@@ -9,8 +9,6 @@ const Main = () => {
         <div className={styles.Content}>
           <div className={`${styles.box_1} ${styles.card}`}></div>
           <div className={`${styles.box_2} ${styles.card}`}></div>
-          <div>Проверка деплоя</div>
-          <div>ещё раз проверка git pull</div>
           {/*<div className={`${styles.box_3} ${styles.card}`}></div>*/}
           {/*<div className={`${styles.box_4} ${styles.card}`}></div>*/}
         </div>
