@@ -4,7 +4,7 @@ WORKDIR /app
 FROM base as builder
 WORKDIR /app
 
-
+RUN git pull
 COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
