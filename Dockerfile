@@ -1,4 +1,3 @@
-CMD git pull
 FROM node:18 AS base
 WORKDIR /app
 
