@@ -18,7 +18,8 @@
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
 .card {
@@ -42,4 +43,9 @@
 
 .box_4 {
   background-color: #f39821;
+}
+
+.image {
+  width: 25vw;
+  height: auto;
 }

@@ -4,10 +4,13 @@ $laptop-w: 1024px;
 $desktop-w: 1366px;
 $large-w: 1920px;
 
-$color-primary: black;
-$color-secondary: darkgray;
+$dark-theme: prefers-color-theme;
 
-@if (prefers-color-scheme: dark) {
-  $color-primary: #ffffff;
-  $color-secondary: peachpuff;
+$color-primary: #000000 !default;
+$color-secondary: #171727 !default;
+
+@if (prefers-color-theme: dark) {
+  $color-primary: lighten($color-primary, 100%);
+  $color-secondary: lighten($color-secondary, 50%);
+  //$color-secondary: peachpuff;
 }
