@@ -10,10 +10,3 @@ services:
       - "3000:3000"
     restart: unless-stopped
     command: npm run start
-    networks:
-      - my_network
-
-
-networks:
-  my_network:
-    external: true
