@@ -4,7 +4,7 @@ services:
   app:
     container_name: yrgn-frontend
     build:
-      context: ./next-app
+      context: .
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
