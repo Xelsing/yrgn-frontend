@@ -1,10 +1,10 @@
 FROM node:18 AS base
+CMD git pull
 WORKDIR /app
 
 FROM base as builder
 WORKDIR /app
 
-CMD git pull
 COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
