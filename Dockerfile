@@ -1,5 +1,5 @@
-FROM node:18 AS base
 CMD git pull
+FROM node:18 AS base
 WORKDIR /app
 
 FROM base as builder
