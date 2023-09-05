@@ -45,8 +45,11 @@
 }
 
 .image {
-  width: 25vw;
+  width: 80vw;
   height: auto;
+  @include ifdesktop {
+    width: 25vw;
+  }
 }
 
 .hide {
