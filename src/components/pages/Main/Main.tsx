@@ -17,29 +17,32 @@ const Main = () => {
         <div className={styles.Content}>
           {/*<div className={`${styles.box_1} ${styles.card}`}></div>*/}
           {/*<div className={`${styles.box_2} ${styles.card}`}></div>*/}
-          <Image
-            onClick={handleChange}
-            className={clsx({
-              [styles["image"]]: true,
-              [styles["hide"]]: !image,
-            })}
-            src={'/1.jpg'}
-            width={960}
-            height={1280}
-            // fill={true}
-            alt={''}
-          />
-          <Image
-            onClick={handleChange}
-            className={clsx({
-              [styles["image"]]: true,
-              [styles["hide"]]: image,
-            })}
-            src={'/2.jpg'}
-            width={960}
-            height={1280}
-            alt={''}
-          />
+          <div className={styles.ImageContainer}>
+            <Image
+              onClick={handleChange}
+              className={clsx({
+                [styles["image"]]: true,
+                [styles["hide"]]: !image,
+              })}
+              src={'/1.jpg'}
+              width={960}
+              height={1280}
+              layout={"responsive"}
+              alt={''}
+            />
+            <Image
+              onClick={handleChange}
+              className={clsx({
+                [styles["image"]]: true,
+                [styles["hide"]]: image,
+              })}
+              src={'/2.jpg'}
+              width={960}
+              height={1280}
+              layout={"responsive"}
+              alt={''}
+            />
+          </div>
           {/*<div className={`${styles.box_3} ${styles.card}`}></div>*/}
           {/*<div className={`${styles.box_4} ${styles.card}`}></div>*/}
         </div>
