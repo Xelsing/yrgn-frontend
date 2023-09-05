@@ -6,7 +6,9 @@ import { clsx } from "clsx";
 
 const Main = () => {
   const [image, setImage] = useState(true);
+  const [anim, setAnim] = useState(true);
   const handleChange = () => {
+    setAnim(false)
     setImage(!image);
   }
 
@@ -47,6 +49,21 @@ const Main = () => {
           {/*<div className={`${styles.box_4} ${styles.card}`}></div>*/}
         </div>
       </div>
+        <div className={clsx({
+          [styles["ArrowContainer"]]: true,
+          [styles["hide"]]: !anim
+        })}>
+          <p className={styles.ArrowContainer__text}>Кликай на кису</p>
+          <div className={styles.ArrowContainer__img}>
+            <Image
+              src={'/arrow.png'}
+              alt={''}
+              width={458}
+              height={458}
+              layout={"responsive"}
+            />
+          </div>
+        </div>
     </section>
   );
 };
