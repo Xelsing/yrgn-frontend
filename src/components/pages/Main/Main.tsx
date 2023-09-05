@@ -1,8 +1,15 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import styles from './Main.module.scss';
 import Image from "next/image";
+import { clsx } from "clsx";
 
 const Main = () => {
+  const [image, setImage] = useState(true);
+  const handleChange = () => {
+    setImage(!image);
+  }
+
   return (
     <section className={styles.Main}>
       <div className={styles.Inner}>
@@ -10,21 +17,29 @@ const Main = () => {
         <div className={styles.Content}>
           {/*<div className={`${styles.box_1} ${styles.card}`}></div>*/}
           {/*<div className={`${styles.box_2} ${styles.card}`}></div>*/}
-            <Image
-              className={styles.image}
-              src={'/1.jpg'}
-              width={960}
-              height={1280}
-              // fill={true}
-              alt={''}
-            />
-            <Image
-              className={styles.image}
-              src={'/2.jpg'}
-              width={960}
-              height={1280}
-              alt={''}
-            />
+          <Image
+            onClick={handleChange}
+            className={clsx({
+              [styles["image"]]: true,
+              [styles["hide"]]: !image,
+            })}
+            src={'/1.jpg'}
+            width={960}
+            height={1280}
+            // fill={true}
+            alt={''}
+          />
+          <Image
+            onClick={handleChange}
+            className={clsx({
+              [styles["image"]]: true,
+              [styles["hide"]]: image,
+            })}
+            src={'/2.jpg'}
+            width={960}
+            height={1280}
+            alt={''}
+          />
           {/*<div className={`${styles.box_3} ${styles.card}`}></div>*/}
           {/*<div className={`${styles.box_4} ${styles.card}`}></div>*/}
         </div>
