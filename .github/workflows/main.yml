@@ -6,15 +6,7 @@ on:
       - main
 
 jobs:
-  test: 
-    runs-on: ubunty-latest
-    
-    steps: 
-    - name: Checkout code
-      uses: actions/checkout@v3
-      
   deploy:
-    needs: test
     runs-on: ubuntu-latest
 
     steps:
