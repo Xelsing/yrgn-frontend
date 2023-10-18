@@ -1,0 +1,31 @@
+name: YRGN CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test: 
+    runs-on: ubunty-latest
+    
+    steps: 
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Build and deploy
+      uses: D3rHase/ssh-command-action@0.2.2
+      with:
+        host: ${{secrets.SSH_HOST}}
+        user: ${{secrets.SSH_USER}}
+        private_key: ${{secrets.PRIVATE_KEY}}
+        command: |
+                  cd ${{ secrets.PROJECT_FOLDER }};
+                  git checkout main;
+                  git pull;
+                  docker-compose up --build -d
