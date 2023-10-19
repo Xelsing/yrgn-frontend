@@ -11,13 +11,5 @@ jobs:
 
     steps:
     - name: Build and deploy
-      uses: D3rHase/ssh-command-action@v0.2.2
-      with:
-        host: ${{secrets.SSH_HOST}}
-        user: ${{secrets.SSH_USER}}
-        private_key: ${{secrets.PRIVATE_KEY}}
-        command: |
-                  cd ${{ secrets.PROJECT_FOLDER }};
-                  git checkout main;
-                  git pull;
-                  docker-compose up --build -d
+      run: |
+        ssh-copy-id ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}
