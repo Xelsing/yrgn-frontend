@@ -11,5 +11,13 @@ jobs:
 
     steps:
     - name: Build and deploy
-      run: |
-        ssh-add - <<< ${{ secrets.SSH_PRIVATE_KEY }}
+    - uses: actions/checkout@v2
+      # Setup key
+    - run: set -eu
+    - run: mkdir "$HOME/.ssh"
+    - run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > "$HOME/.ssh/key"
+    - run: chmod 600 "$HOME/.ssh/key"
+    # Deploy
+    - run: cd app && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no"
+    - run: ssh ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}} 'cd ${{ secrets.PROJECT_FOLDER }} && git pull'
+    - run: ssh ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}} 'cd ${{ secrets.PROJECT_FOLDER }} && docker-compose up --build -d'
