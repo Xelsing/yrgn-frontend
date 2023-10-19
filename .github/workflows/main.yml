@@ -12,4 +12,4 @@ jobs:
     steps:
     - name: Build and deploy
       run: |
-        ssh-copy-id ${{secrets.SSH_USER}}@${{secrets.SSH_HOST}}
+        ssh-add - <<< ${{ secrets.SSH_PRIVATE_KEY }}
