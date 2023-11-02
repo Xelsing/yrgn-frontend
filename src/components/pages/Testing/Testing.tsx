@@ -6,7 +6,7 @@ const Testing = () => {
     <section className={styles.Testing}>
       <div className={styles.Inner}>
         <div className={styles.box}>
-
+          <span>testing</span>
         </div>
       </div>
     </section>
