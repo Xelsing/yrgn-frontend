@@ -1,7 +1,9 @@
 .Footer {
+  position: absolute;
   height: 55px;
   width: 100%;
   bottom: 0;
+  padding: 10px 15px;
 
   &__text {
     font-size: 18px;
